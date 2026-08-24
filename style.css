@@ -1,0 +1,24 @@
+:root { color-scheme: dark; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #080b09; color: #f4f7f5; min-height: 100vh; min-height: 100dvh; }
+main { min-height: 100vh; min-height: 100dvh; display: grid; grid-template-rows: auto 1fr auto auto; }
+header { padding: calc(12px + env(safe-area-inset-top)) 18px 12px; display: flex; justify-content: space-between; align-items: center; background: #101512; }
+h1 { margin: 0; font-size: 21px; }
+header p { margin: 4px 0 0; color: #aebbb3; font-size: 13px; }
+#fps { font-variant-numeric: tabular-nums; color: #69e391; }
+#viewer { position: relative; min-height: 320px; overflow: hidden; background: #000; display: grid; place-items: center; }
+#camera, #overlay { position: absolute; width: 100%; height: 100%; object-fit: contain; }
+#overlay { z-index: 2; }
+#empty { text-align: center; color: #d8dfda; line-height: 1.8; }
+#empty small { color: #7f8f84; }
+.controls { padding: 14px 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #101512; }
+button { min-height: 48px; border: 0; border-radius: 12px; color: white; font-size: 16px; font-weight: 650; background: #db6e21; }
+button:disabled { opacity: .4; }
+#stop { background: #35423a; }
+label { grid-column: 1 / -1; color: #c8d2cb; font-size: 14px; display: grid; grid-template-columns: 1fr auto; gap: 6px 10px; }
+input { grid-column: 1 / -1; width: 100%; accent-color: #e87927; }
+footer { display: flex; gap: 18px; flex-wrap: wrap; padding: 10px 18px calc(10px + env(safe-area-inset-bottom)); color: #aebbb3; font-size: 12px; background: #0c100d; }
+footer span { display: flex; align-items: center; gap: 5px; }
+footer i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.calyx { background: #4cff70; } .tip { background: #26d7ff; }
+@media (orientation: landscape) { header { padding-top: calc(8px + env(safe-area-inset-top)); } .controls { grid-template-columns: 160px 120px 1fr; align-items: center; } label { grid-column: auto; } }
